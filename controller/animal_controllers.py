@@ -1,4 +1,3 @@
-from turtle import clear
 from models.animal import Animal
 from time import sleep
 from os import system
@@ -25,6 +24,7 @@ def gravar():
         opçao = input("Deseja gravar mais um animal? [S|N]\n")
         if  opçao.lower() == "n":
             break
+        sleep(.8)
 
 def buscar():
     system("clear")
@@ -39,13 +39,13 @@ def buscar():
         print(f"Código: {animal.codigo}")
         print(f"Nome: {animal.nome}")
         print(f"Descrição: {animal.descricao}")
-        sleep(.5)
+        sleep(.7)
 
         
 def buscar_por_Codigo():
     system("clear")
     while True:
-        codigo = input("Digite o código do animal:\n")
+        codigo = input("Digite o código do animal: ")
         if codigo:
            break 
        
@@ -58,8 +58,9 @@ def buscar_por_Codigo():
         print("Não achamos um animal com este código.")
         return
     
+    sleep(.5)   
     print("=" * 50)
     print(f"Código: {animal.codigo}")
     print(f"Nome: {animal.nome}")
     print(f"Descrição: {animal.descricao}")
-    sleep(.5)   
+    sleep(.8)   
